@@ -1,0 +1,86 @@
+/* Button Utilities - Following Industry Standards */
+
+/* Primary Button - Your brand color #C82333 */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.btn-primary {
+  background-color: #c82333;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #a61e2a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(200, 35, 51, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-primary:focus {
+  outline: 2px solid #c82333;
+  outline-offset: 2px;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: transparent;
+  color: #c82333;
+  border: 2px solid #c82333;
+}
+
+.btn-secondary:hover {
+  background-color: #c82333;
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Button Sizes */
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.btn-lg {
+  padding: 1rem 2.5rem;
+  font-size: 1.125rem;
+}
+
+/* Ghost Button */
+.btn-ghost {
+  background-color: transparent;
+  color: #c82333;
+}
+
+.btn-ghost:hover {
+  background-color: rgba(200, 35, 51, 0.1);
+}
+
+/* Disabled Button */
+.btn:disabled,
+.btn[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn:disabled:hover,
+.btn[disabled]:hover {
+  transform: none;
+  box-shadow: none;
+}

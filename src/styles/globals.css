@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "tailwindcss";
+@import "./components.css";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #700000;
+  --primary-hover: #a61e2a;
+  --primary-light: #e53e3e;
+  --primary-dark: #9b1c27;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --primary: #c82333;
+    --primary-hover: #a61e2a;
+    --primary-light: #e53e3e;
+    --primary-dark: #9b1c27;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Outfit", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Primary Button Styles */
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-family: "Outfit", ui-sans-serif, system-ui, sans-serif;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-primary:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Hero Section Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animation-delay-200 {
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.animation-delay-400 {
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+
+/* Custom transition duration */
+.duration-2000 {
+  transition-duration: 2000ms;
+}
+
+/* Smooth hover effects for hero section */
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
+}
+
+/* Subtle dark overlay for hero images */
+.hero-slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Services Section Hover Effects */
+.group\/feature:hover .group-hover\/feature\:opacity-100 {
+  opacity: 1;
+}
+
+.group\/feature:hover .group-hover\/feature\:h-8 {
+  height: 2rem;
+}
+
+.group\/feature:hover .group-hover\/feature\:bg-primary {
+  background-color: var(--primary);
+}
+
+.group\/feature:hover .group-hover\/feature\:translate-x-2 {
+  transform: translateX(0.5rem);
+}
+
+/* Client Logos Auto-Sliding Animation */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slide {
+  animation: slide 30s linear infinite;
+}
+
+/* Pause animation on hover */
+.animate-slide:hover {
+  animation-play-state: paused;
+}
+
+/* Remove default browser focus ring but keep Tailwind hover/active styles */
+nav a:focus,
+nav button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Prevent unwanted default active styles but DO NOT override Tailwind hover bg */
+.navbar-link:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Do NOT force background to transparent — this caused the bug */

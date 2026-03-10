@@ -1,0 +1,98 @@
+{
+  "nextjs_seo_guideline": {
+    "entry_point": {
+      "file": "app/layout.tsx",
+      "requirements": [
+        "Set global metadata: title, description, metadataBase, openGraph, twitter, alternates.canonical",
+        "Use <html lang='bn'> or <html lang='en'> depending on content",
+        "Add JSON-LD Organization schema",
+        "Load global fonts with next/font",
+        "Include global <header> and <footer>"
+      ]
+    },
+    "pages": {
+      "file_pattern": "app/[page]/page.tsx",
+      "requirements": [
+        "Export metadata or generateMetadata",
+        "Unique title and description per page",
+        "Add alternates.canonical",
+        "Optional openGraph and twitter per page",
+        "One <h1> per page",
+        "Use semantic HTML structure: <main>, <section>, <article>, <aside>, <nav>",
+        "Breadcrumb JSON-LD for nested pages",
+        "FAQPage JSON-LD if FAQ exists"
+      ]
+    },
+    "components": {
+      "requirements": [
+        "Navbar: <nav aria-label='Primary'> with <ul><li><a>",
+        "Hero: <section> with <h1> (homepage) or <h2> (secondary pages)",
+        "Cards: wrap services/blogs in <article>",
+        "Testimonials: use <blockquote> or <figure> with <figcaption>",
+        "Pricing: use <table> with <thead>, <tbody>, <th>",
+        "Footer: <footer> with <address> for NAP consistency",
+        "Add ARIA attributes where needed",
+        "All images must include descriptive alt text"
+      ]
+    },
+    "images_media": {
+      "requirements": [
+        "Use Next.js <Image> for optimization",
+        "Add descriptive alt attributes with keywords",
+        "Use default OG image and page-specific OG images if possible",
+        "Compress and resize images",
+        "Set width and height to prevent CLS"
+      ]
+    },
+    "blogs_dynamic_pages": {
+      "requirements": [
+        "Use generateMetadata with params for unique SEO",
+        "Include datePublished, author, modifiedDate in JSON-LD Article schema",
+        "Add breadcrumbs JSON-LD",
+        "Structure content inside <article>",
+        "Use <h1> for title, <h2>/<h3> for hierarchy",
+        "Use <ul>/<ol> for lists"
+      ]
+    },
+    "global_features": {
+      "requirements": [
+        "Generate sitemap.ts with static and dynamic routes",
+        "Generate robots.ts to allow crawling and link sitemap",
+        "Use hreflang with metadata.alternates.languages if multilingual",
+        "Optionally use next-sitemap package",
+        "Integrate Google Analytics (GA4) and Search Console"
+      ]
+    },
+    "performance": {
+      "requirements": [
+        "Use next/font for optimized fonts",
+        "Lazy load non-critical components with dynamic import",
+        "Define width and height for images",
+        "Use SSR or SSG for main pages",
+        "Preload critical assets with <link rel='preload'>",
+        "Optimize CLS, LCP, FID"
+      ]
+    },
+    "local_seo": {
+      "requirements": [
+        "Include NAP (Name, Address, Phone) in <footer> and JSON-LD",
+        "Embed Google Maps on contact page",
+        "Use local keywords like 'Tax Consultant in Dhaka Bangladesh'"
+      ]
+    },
+    "final_checklist": {
+      "per_page": [
+        "Unique title and description in metadata",
+        "One <h1>",
+        "Semantic HTML structure",
+        "Optimized images with alt text",
+        "Canonical URL set",
+        "OG tags (title, description, image)",
+        "JSON-LD schema (Org, Article, FAQ, Breadcrumb as relevant)",
+        "Sitemap and robots accessible",
+        "Mobile-first and fast (Core Web Vitals green)",
+        "Internal links and clear navigation"
+      ]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+# ========================================
+# VERCEL ENVIRONMENT VARIABLES
+# ========================================
+# Copy and paste these into Vercel Dashboard
+# Settings → Environment Variables
+# ========================================
+
+Variable 1:
+Name: EMAIL_USER
+Value: taxsenseweb@gmail.com
+Environment: Production, Preview, Development
+
+---
+
+Variable 2:
+Name: EMAIL_PASSWORD
+Value: jnxs zdam qawd iuxx
+Environment: Production, Preview, Development
+
+---
+
+Variable 3:
+Name: EMAIL_FROM
+Value: taxsenseweb@gmail.com
+Environment: Production, Preview, Development
+
+---
+
+Variable 4:
+Name: EMAIL_TO
+Value: taxsenselimited@gmail.com
+Environment: Production, Preview, Development
+
+========================================
+IMPORTANT: After adding all variables, REDEPLOY your project!
+========================================
+

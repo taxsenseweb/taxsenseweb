@@ -1,0 +1,28 @@
+{
+  "name": "Taxsense Ltd - Professional Tax Consultancy Services",
+  "short_name": "Taxsense",
+  "description": "Leading tax consultancy firm in Bangladesh providing comprehensive tax services, VAT consultation, accounting solutions, and business advisory services.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#A21B21",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/taxsense_ltd1.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/taxsense_ltd1.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "finance", "productivity"],
+  "lang": "en-US",
+  "scope": "/",
+  "id": "taxsense-ltd"
+}
