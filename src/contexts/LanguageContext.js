@@ -17,7 +17,7 @@ export const translations = {
     },
     // Hero Section
     hero: {
-      title: "Professional Tax & Business Solutions",
+      title: "Professional Tax & Business Solutions and services",
       subtitle: "Expert guidance for your financial success",
       description:
         "Comprehensive tax advisory, VAT consultancy, Company Documentation and business solutions tailored to meet your specific needs. Trust our experienced professionals to handle your financial requirements.",
